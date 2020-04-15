@@ -138,7 +138,7 @@ body {
 .cta-bottom {
   position: absolute;
   top: -8rem;
-  left: 5%;
+  width: 95%;
   background-color: #fff;
   color: #000;
   border: 1px solid var(--veryPaleCyan);
@@ -237,6 +237,10 @@ footer .copyright {
   .heading img {
     width: auto;
   }
+
+  .cta-bottom {
+    display: none;
+  }
 }
 
 /* Medium Devices */
@@ -303,21 +307,6 @@ footer .copyright {
   .bottom .card.flow {
     display: flex;
     flex-direction: row;
-  }
-
-  .cta-bottom {
-    padding: 5rem 8rem;
-    top: -11rem;
-    left: 22%;
-  }
-
-  .cta-bottom h3 {
-    font-size: 2rem;
-  }
-
-  .cta-bottom button {
-    padding: 1rem 3rem;
-    font-size: 1rem;
   }
 
   footer {
