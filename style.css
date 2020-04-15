@@ -37,6 +37,10 @@ body {
   font-size: 0.8rem;
 }
 
+.btn:hover {
+  opacity: 0.9;
+}
+
 /* Top Section */
 .top {
   background-image: url('images/bg-hero-mobile.svg');
@@ -62,6 +66,7 @@ body {
   background-color: #fff;
   color: #000;
   border-color: var(--veryPaleCyan);
+  box-shadow: 0 0 10px 5px #ccc;
 }
 
 .top-container {
@@ -76,6 +81,7 @@ body {
 }
 
 .cta h1 {
+  font-family: 'Open Sans', sans-serif;
   font-size: 2rem;
   margin-bottom: 1.5rem;
 }
@@ -118,12 +124,12 @@ body {
   margin-bottom: 4rem;
 }
 
-.card h3 {
+.card .details h3 {
   margin-bottom: 1.5rem;
   font-size: 1.5rem;
 }
 
-.card p {
+.card .details p {
   font-size: 1rem;
   color: var(--grayishBlue);
   line-height: 1.5;
@@ -201,6 +207,7 @@ footer {
 
 .footer-social {
   display: flex;
+  flex-direction: row-reverse;
   justify-content: center;
   margin-top: 4rem;
   margin-bottom: 1.5rem;
@@ -234,16 +241,132 @@ footer .copyright {
 
 /* Medium Devices */
 @media (min-width: 768px) {
+}
+
+/* Large Devices */
+@media (min-width: 992px) {
   .top {
     background-image: url('images/bg-hero-desktop.svg');
+    padding: 0 4.5rem 3.5rem;
   }
 
   .top-container {
     display: flex;
     flex-direction: row;
   }
-}
 
-/* Large Devices */
-@media (min-width: 992px) {
+  .top-container .cta {
+    width: 40%;
+    padding: 6rem 0 0 0;
+    text-align: left;
+  }
+
+  .cta h1 {
+    font-size: 2.5rem;
+  }
+
+  .top-container .ctaButton {
+    width: 55%;
+    font-size: 1rem;
+  }
+
+  .top-container .mockup {
+    width: 60%;
+  }
+
+  .bottom-container {
+    padding: 7rem;
+  }
+
+  .bottom .card {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 3rem;
+    text-align: left;
+    line-height: 1.5;
+  }
+
+  .bottom .card h3 {
+    font-size: 2rem;
+  }
+
+  .bottom .card p {
+    font-size: 1.1rem;
+  }
+
+  .bottom .card .details {
+    padding: 0 6rem;
+  }
+
+  .bottom .card.flow {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .cta-bottom {
+    padding: 5rem 8rem;
+    top: -11rem;
+    left: 22%;
+  }
+
+  .cta-bottom h3 {
+    font-size: 2rem;
+  }
+
+  .cta-bottom button {
+    padding: 1rem 3rem;
+    font-size: 1rem;
+  }
+
+  footer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas:
+      'logo . . .'
+      'location links links social'
+      'phone links links .'
+      'email . . .'
+      '. . . copyright';
+    padding: 15rem 5rem 3rem;
+  }
+
+  .footer-logo {
+    grid-area: logo;
+  }
+
+  .footer-contact.location {
+    grid-area: location;
+  }
+
+  .footer-contact.phone {
+    grid-area: phone;
+  }
+
+  .footer-contact.email {
+    grid-area: email;
+  }
+
+  .footer-links {
+    grid-area: links;
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    justify-self: center;
+  }
+
+  .footer-links .col1 {
+    margin-right: 7rem;
+  }
+
+  .footer-social {
+    grid-area: social;
+    margin: 0;
+  }
+
+  footer .copyright {
+    grid-area: copyright;
+  }
 }
